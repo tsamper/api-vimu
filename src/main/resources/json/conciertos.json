@@ -1,0 +1,621 @@
+{
+    "conciertos":[
+    {
+        "nombre": "Hoke en Murcia",
+        "recinto": {
+            "nombre": "Garaje Beat Club",
+            "direccion": "Calle Canales 82",
+            "ciudad": "Murcia",
+            "telefono": "965874854",
+            "correo": "contacto@garajebeat.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+de+conciertos+Garaje+Beat+Club/@38.0012377,-1.147155,17z/data=!3m1!4b1!4m6!3m5!1s0xd63818e25c03833:0xaf1c404f5b6731ed!8m2!3d38.0012335!4d-1.1445801!16s%2Fg%2F1tf76vsp?hl=es&entry=ttu" 
+        },
+        "fecha": "2024-06-27",
+        "hora": "22:30",
+        "grupo": {
+            "nombre": "Hoke",
+            "descripcion": "Con una trayectoria en constante ascenso, se ha destacado en la escena musical por su estilo distintivo y su habilidad para transmitir letras profundas y reflexivas a través de sus canciones.",
+            "genero": "Rap",
+            "ciudad": "Valencia",
+            "pais": "España",
+            "imagen": "img/grupos/hoke.jpg",
+            "perfil_spotify": "https://open.spotify.com/intl-es/artist/2x6kZekpNZMll7Uq3M6ar5"
+        },
+        "imagen": "img/carteles/Hoke_Murcia.jpg",
+        "cantidad_entradas": 500,
+        "precio_entradas": 20,
+        "cantidad_entradas_vip": 50,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Jaro Cristo en Murcia",
+        "recinto": {
+            "nombre": "Sala Rem",
+                "direccion": "Calle Puerta Nueva, 33",
+                "ciudad": "Murcia",
+                "telefono": "968223355",
+                "correo": "info@salarem.com",
+                "enlace_maps": "https://www.google.es/maps/place/Sala+R.E.M./@37.9900292,-1.130423,16z/data=!3m2!4b1!5s0xd63821aff7dcea1:0x9df1363c94ccb4aa!4m6!3m5!1s0xd63821a92feca31:0x763f4b7d02da24a8!8m2!3d37.990025!4d-1.1278481!16s%2Fg%2F11b75mb6wh?hl=es&entry=ttu"
+            },
+        "fecha": "2024-07-10",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Jaro Cristo",
+            "descripcion": "Rapero murciano conocido por su estilo crudo y visceral, ha sido una figura clave en la escena del rap de la Región de Murcia durante casi una década. ",
+            "genero": "Urbana",
+            "ciudad": "Murcia",
+            "pais": "España",
+            "imagen": "img/grupos/jaro_cristo.jpg",
+            "perfil_spotify": "https://open.spotify.com/intl-es/artist/5FobI8tX7XLuLImE2C3FJV"
+        },
+        "imagen": "img/carteles/Jarocristo_murcia.png",
+        "cantidad_entradas": 1000,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 100,
+        "precio_entradas_vip": 60,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Rosalía en Barcelona",
+        "recinto": {
+            "nombre": "Sala Apolo",
+            "direccion": "Carrer Nou de la Rambla, 113",
+            "ciudad": "Barcelona",
+            "telefono": "934414001",
+            "correo": "info@sala-apolo.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+Apolo+Barcelona/@41.3744263,2.1670325,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a25c75a2cf3b:0xfe58977ad221b3a6!8m2!3d41.3744223!4d2.1696074!16s%2Fg%2F1z2crvc63?hl=es&entry=ttu"
+        },
+        "fecha": "2024-08-15",
+        "hora": "20:00",
+        "grupo": {
+            "nombre": "Rosalía",
+            "descripcion": "Artista conocida por fusionar flamenco con música urbana.",
+            "genero": "Flamenco Urbano",
+            "ciudad": "Barcelona",
+            "pais": "España",
+            "imagen": "img/grupos/rosalia.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/7ltDVBr6mKbRvohxheJ9h1"
+        },
+        "imagen": "img/carteles/Rosalia_Barcelona.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 40,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 80,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Luz Casal en Vitoria-Gasteiz",
+        "recinto": {
+            "nombre": "Sala Jimmy Jazz",
+            "direccion": "Calle Ronda, 2",
+            "ciudad": "Vitoria-Gasteiz",
+            "telefono": "945234567",
+            "correo": "info@jimmyjazzgasteiz.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+%22Jimmy+Jazz+Gasteiz%22/@42.8522445,-2.6791635,17z/data=!3m1!4b1!4m6!3m5!1s0xd4fc24028558b23:0x3ebbef92564d4e5e!8m2!3d42.8522406!4d-2.6765886!16s%2Fg%2F124ypn4nn?hl=es&entry=ttu"
+        },
+        "fecha": "2024-09-05",
+        "hora": "19:30",
+        "grupo": {
+            "nombre": "Luz Casal",
+            "descripcion": "Cantante con una larga trayectoria en la música pop y rock.",
+            "genero": "Pop Rock",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/luz_casal.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/2S2qS89j6x6R4TRZNfbECi"
+        },
+        "imagen": "img/carteles/Luz_Casal_Vitoria-Gasteiz.jpg",
+        "cantidad_entradas": 600,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 60,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Vetusta Morla en Madrid",
+        "recinto": {
+            "nombre": "Sala Caracol",
+            "direccion": "Calle Bernardino Obregón, 18",
+            "ciudad": "Madrid",
+            "telefono": "914678390",
+            "correo": "info@salarockcity.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+Caracol/@40.4039892,-3.7026501,17z/data=!3m1!4b1!4m6!3m5!1s0xd42262d0c86d51f:0x40a17ce2fdd555d3!8m2!3d40.4039851!4d-3.7000752!16s%2Fm%2F0lbvym0?hl=es&entry=ttu"
+        },
+        "fecha": "2024-10-01",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Vetusta Morla",
+            "descripcion": "Banda de indie rock con gran influencia en la escena musical española.",
+            "genero": "Indie Rock",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/vetusta_morla.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/5B0iemuYUMgOv57Cm9L1a7"
+        },
+        "imagen": "img/carteles/Vetusta_Morla_Madrid.jpg",
+        "cantidad_entradas": 700,
+        "precio_entradas": 35,
+        "cantidad_entradas_vip": 70,
+        "precio_entradas_vip": 70,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Love of Lesbian en Barcelona",
+        "recinto": {
+            "nombre": "Razzmatazz",
+            "direccion": "Carrer dels Almogàvers, 122",
+            "ciudad": "Barcelona",
+            "telefono": "933208266",
+            "correo": "info@razzmatazz.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+Razzmatazz/@41.3975351,2.1894021,17.25z/data=!3m1!5s0x12a4a319059f6311:0x5b2405114fe539dc!4m6!3m5!1s0x12a4a3190e0640b5:0x40f9d8fe93a98ca!8m2!3d41.3977323!4d2.1911108!16s%2Fg%2F1211jj9f?hl=es&entry=ttu"
+        },
+        "fecha": "2024-11-20",
+        "hora": "22:00",
+        "grupo": {
+            "nombre": "Love of Lesbian",
+            "descripcion": "Banda de pop-rock con letras profundas y emotivas.",
+            "genero": "Pop Rock",
+            "ciudad": "Barcelona",
+            "pais": "España",
+            "imagen": "img/grupos/love_of_lesbian.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/0qys79pYyGS3yu0M0J2Eam"
+        },
+        "imagen": "img/carteles/Love_of_Lesbian_Barcelona.jpg",
+        "cantidad_entradas": 1000,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 100,
+        "precio_entradas_vip": 60,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Hard GZ en Alicante",
+        "recinto": {
+            "nombre": "Sala Joy Eslava",
+            "direccion": "Calle del Arenal, 11",
+            "ciudad": "Alicante",
+            "telefono": "913665996",
+            "correo": "info@joyeslava.com",
+            "enlace_maps": "https://www.google.es/maps/place/Teatro+Eslava/@40.4171678,-3.709141,17z/data=!3m2!4b1!5s0xd42287e96e94155:0xde63a7b3b323132!4m6!3m5!1s0xd42287e9746e7dd:0x99807c2312ccc88!8m2!3d40.4171637!4d-3.7065661!16s%2Fm%2F0lhc690?hl=es&entry=ttu"
+        },
+        "fecha": "2024-06-15",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Hard GZ",
+            "descripcion": "Hard GZ es un artista versátil y comprometido que ha logrado posicionarse como un referente del rap español actual.",
+            "genero": "Rap",
+            "ciudad": "Vigo",
+            "pais": "España",
+            "imagen": "img/grupos/hardgz.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/3FONxnePzPucdTnmDqS4Gm"
+        },
+        "imagen": "img/carteles/Hardgz_Alicante.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Kase.O en Valencia",
+        "recinto": {
+            "nombre": "Sala Rock City",
+            "direccion": "Carrer Els Coheters, 6",
+            "ciudad": "Valencia",
+            "telefono": "963567490",
+            "correo": "info@rockcityvalencia.com",
+            "enlace_maps": "https://www.google.es/maps/place/Rock+City/@39.5117173,-0.3632571,17z/data=!3m1!4b1!4m6!3m5!1s0xd60466c002fa9fb:0x405243f394cb2727!8m2!3d39.5117132!4d-0.3606822!16s%2Fg%2F11h0pb8y6?hl=es&entry=ttu"
+        },
+        "fecha": "2024-06-14",
+        "hora": "20:30",
+        "grupo": {
+            "nombre": "Kase.O",
+            "descripcion": "Referente del rap español, conocido por su lirismo y profundidad.",
+            "genero": "Rap",
+            "ciudad": "Zaragoza",
+            "pais": "España",
+            "imagen": "img/grupos/kase_o.jpg",
+            "perfil_spotify": "https://open.spotify.com/intl-es/artist/7GmXwGXJSsmWTkCyk5Twux"
+        },
+        "imagen": "img/carteles/Kase.O_Valencia.jpg",
+        "cantidad_entradas": 600,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 60,
+        "precio_entradas_vip": 60,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Dani Martín en Málaga",
+        "recinto": {
+            "nombre": "Sala La Trinchera",
+            "direccion": "Calle Parauta, 25",
+            "ciudad": "Málaga",
+            "telefono": "952243792",
+            "correo": "info@latrinchera.com",
+            "enlace_maps": "https://www.google.es/maps/place/La+Trinchera/@36.7013754,-4.4691441,17z/data=!3m1!4b1!4m6!3m5!1s0xd72f759adb59c2d:0x494cf81feaf215c!8m2!3d36.7013729!4d-4.4676566!16s%2Fg%2F1hjh770vj?hl=es&entry=ttu"
+        },
+        "fecha": "2024-07-18",
+        "hora": "21:30",
+        "grupo": {
+            "nombre": "Dani Martín",
+            "descripcion": "Exvocalista de El Canto del Loco, con una exitosa carrera en solitario.",
+            "genero": "Pop Rock",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/dani_martin.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/2uYF3j2AegcQ9wKHjIfCMO"
+        },
+        "imagen": "img/carteles/Dani_Martin_Malaga.jpg",
+        "cantidad_entradas": 700,
+        "precio_entradas": 40,
+        "cantidad_entradas_vip": 70,
+        "precio_entradas_vip": 80,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Nathy Peluso en Bilbao",
+        "recinto": {
+            "nombre": "Sala Kafe Antzokia",
+            "direccion": "Done Bikendi Kalea, 2",
+            "ciudad": "Bilbao",
+            "telefono": "944245667",
+            "correo": "info@kafeantzokia.com",
+            "enlace_maps": "https://www.google.es/maps/place/Kafe+Antzokia/@43.2637215,-2.9302842,17z/data=!3m2!4b1!5s0xd4e4fdaada49a25:0x9929ecaecf86079f!4m6!3m5!1s0xd4e4fdab02a96b7:0x29edec3df156f860!8m2!3d43.2637176!4d-2.9277093!16s%2Fm%2F0ljf_wj?hl=es&entry=ttu"
+        },
+        "fecha": "2024-08-20",
+        "hora": "20:00",
+        "grupo": {
+            "nombre": "Nathy Peluso",
+            "descripcion": "Artista argentina que fusiona diversos estilos musicales.",
+            "genero": "Fusión",
+            "ciudad": "Buenos Aires",
+            "pais": "Argentina",
+            "imagen": "img/grupos/nathy_peluso.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/1pQWsZQehhS4wavwh7Fnxd"
+        },
+        "imagen": "img/carteles/Nathy_Peluso_Bilbao.jpg",
+        "cantidad_entradas": 500,
+        "precio_entradas": 35,
+        "cantidad_entradas_vip": 50,
+        "precio_entradas_vip": 70,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Mala Rodríguez en Córdoba",
+        "recinto": {
+            "nombre": "Sala M100",
+            "direccion": "Calle Córdoba, 2",
+            "ciudad": "Córdoba",
+            "telefono": "957767575",
+            "correo": "info@salam100.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+M100/@37.9038396,-4.7717509,17z/data=!3m1!4b1!4m6!3m5!1s0xd6cdfa00759cdaf:0x20d599d722fed919!8m2!3d37.9038354!4d-4.769176!16s%2Fg%2F11c5_527rl?hl=es&entry=ttu"
+        },
+        "fecha": "2024-09-10",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Mala Rodríguez",
+            "descripcion": "Pionera del rap en español, con una carrera llena de éxitos.",
+            "genero": "Rap",
+            "ciudad": "Jerez de la Frontera",
+            "pais": "España",
+            "imagen": "img/grupos/mala_rodriguez.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/5z6x1di9WDKWcAamv9F7h0"
+        },
+        "imagen": "img/carteles/Mala_Rodriguez_Cordoba.jpg",
+        "cantidad_entradas": 600,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 60,
+        "precio_entradas_vip": 60,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Pablo Alborán en Zaragoza",
+        "recinto": {
+            "nombre": "Sala Oasis Club Teatro",
+            "direccion": "Calle Boggiero, 28",
+            "ciudad": "Zaragoza",
+            "telefono": "976436935",
+            "correo": "info@oasisteatro.com",
+            "enlace_maps": "https://www.google.es/maps/place/Oasis+Club+Teatro/@41.6551744,-0.8905603,17z/data=!3m1!4b1!4m6!3m5!1s0xd5914ea61e529c9:0xaec7681450c6c28c!8m2!3d41.6551705!4d-0.8856894!16s%2Fg%2F1tf3_px9?hl=es&entry=ttu" 
+        },
+        "fecha": "2024-10-17",
+        "hora": "22:00",
+        "grupo": {
+            "nombre": "Pablo Alborán",
+            "descripcion": "Cantautor de baladas románticas con gran popularidad.",
+            "genero": "Pop",
+            "ciudad": "Málaga",
+            "pais": "España",
+            "imagen": "img/grupos/pablo_alboran.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/5vBSrE1xujD2FXYRarbAXc"
+        },
+        "imagen": "img/carteles/Pablo_Alboran_Zaragoza.jpg",
+        "cantidad_entradas": 700,
+        "precio_entradas": 45,
+        "cantidad_entradas_vip": 70,
+        "precio_entradas_vip": 90,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Estopa en Santiago de Compostela",
+        "recinto": {
+            "nombre": "Sala Capitol",
+            "direccion": "Concepción Arenal, 5",
+            "ciudad": "Santiago de Compostela",
+            "telefono": "981569097",
+            "correo": "info@salacapitol.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+Capitol+(Santiago+de+Compostela)/@42.8767532,-8.5482754,17z/data=!3m2!4b1!5s0xd2efe47163b5265:0x671122797cafd695!4m6!3m5!1s0xd2efe473db65af1:0xaf03f514b27a5980!8m2!3d42.8767494!4d-8.5434045!16s%2Fm%2F0k4x0lf?hl=es&entry=ttu"
+        },
+        "fecha": "2024-11-05",
+        "hora": "20:30",
+        "grupo": {
+            "nombre": "Estopa",
+            "descripcion": "Dúo que mezcla rumba catalana con pop y rock.",
+            "genero": "Rumba Rock",
+            "ciudad": "Cornellà de Llobregat",
+            "pais": "España",
+            "imagen": "img/grupos/estopa.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/0q2Y3KjQo5aGmFAxQurRB8"
+        },
+        "imagen": "img/carteles/Estopa_Santiago.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 35,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 70,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Izal en Murcia",
+        "recinto": {
+            "nombre": "La Riviera",
+            "direccion": "Paseo Bajo de la Virgen del Puerto, s/n",
+            "ciudad": "Madrid",
+            "telefono": "913651237",
+            "correo": "info@lariviera.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+La+Riviera/@40.413004,-3.7247263,17z/data=!3m1!4b1!4m6!3m5!1s0xd422875694a75a3:0x1e8065c475c72b1!8m2!3d40.4129999!4d-3.7221514!16s%2Fg%2F11bc6w584r?hl=es&entry=ttu"
+        },
+        "fecha": "2024-12-18",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Izal",
+            "descripcion": "Banda de indie pop con gran impacto en la música española.",
+            "genero": "Indie Pop",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/izal.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/3uJx5SnOM59Li7lCxA3b29"
+        },
+        "imagen": "img/carteles/Izal_Murcia.jpg",
+        "cantidad_entradas": 600,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 60,
+        "precio_entradas_vip": 60,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Vetusta Morla en Barcelona",
+        "recinto": {
+            "nombre": "Sala Copérnico",
+            "direccion": "Calle de Fernández de los Ríos, 67",
+            "ciudad": "Barcelona",
+            "telefono": "914497012",
+            "correo": "info@salacopernico.com",
+            "enlace_maps": "https://www.google.es/maps/place/Cop%C3%A9rnico+The+Club/@40.435275,-3.7161354,17z/data=!3m1!4b1!4m6!3m5!1s0xd422842d9dfa985:0x80c431fa6eadc0b2!8m2!3d40.4352709!4d-3.7135605!16s%2Fg%2F1th29q5y?hl=es&entry=ttu"
+        },
+        "fecha": "2024-10-10",
+        "hora": "21:30",
+        "grupo": {
+            "nombre": "Vetusta Morla",
+            "descripcion": "Banda de indie rock con gran influencia en la escena musical española.",
+            "genero": "Indie Rock",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/vetusta_morla.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/5B0iemuYUMgOv57Cm9L1a7"
+        },
+        "imagen": "img/carteles/Vetusta_Morla_Barcelona.jpg",
+        "cantidad_entradas": 700,
+        "precio_entradas": 35,
+        "cantidad_entradas_vip": 70,
+        "precio_entradas_vip": 70,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Lola Indigo en Barcelona",
+        "recinto": {
+            "nombre": "Sala Apolo",
+            "direccion": "Carrer Nou de la Rambla, 113",
+            "ciudad": "Barcelona",
+            "telefono": "934414001",
+            "correo": "info@sala-apolo.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+Apolo+Barcelona/@41.3744263,2.1670325,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a25c75a2cf3b:0xfe58977ad221b3a6!8m2!3d41.3744223!4d2.1696074!16s%2Fg%2F1z2crvc63?hl=es&entry=ttu"
+        },
+        "fecha": "2024-09-05",
+        "hora": "22:00",
+        "grupo": {
+            "nombre": "Lola Indigo",
+            "descripcion": "Cantante y bailarina que fusiona pop y música urbana.",
+            "genero": "Pop Urbano",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/lola_indigo.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/0PxaYdxC8fLxuGSXO5RlVj"
+        },
+        "imagen": "img/carteles/Lola_Indigo_Barcelona.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 30,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 60,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Beret en Vitoria-Gasteiz",
+        "recinto": {
+            "nombre": "Sala Jimmy Jazz",
+            "direccion": "Calle Ronda, 2",
+            "ciudad": "Vitoria-Gasteiz",
+            "telefono": "945234567",
+            "correo": "info@jimmyjazzgasteiz.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+%22Jimmy+Jazz+Gasteiz%22/@42.8522445,-2.6791635,17z/data=!3m1!4b1!4m6!3m5!1s0xd4fc24028558b23:0x3ebbef92564d4e5e!8m2!3d42.8522406!4d-2.6765886!16s%2Fg%2F124ypn4nn?hl=es&entry=ttu"
+
+        },
+        "fecha": "2024-08-12",
+        "hora": "20:30",
+        "grupo": {
+            "nombre": "Beret",
+            "descripcion": "Cantautor conocido por sus letras sinceras y emotivas.",
+            "genero": "Pop Urbano",
+            "ciudad": "Sevilla",
+            "pais": "España",
+            "imagen": "img/grupos/beret.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/1hcdI2N1023RvSwLzTtdsp"
+        },
+        "imagen": "img/carteles/Beret_Vitoria.jpg",
+        "cantidad_entradas": 600,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 60,
+        "precio_entradas_vip": 50,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Vetusta Morla en Valencia",
+        "recinto": {
+            "nombre": "Sala Matisse",
+            "direccion": "Calle Bernardino Obregón, 18",
+            "ciudad": "Valencia",
+            "telefono": "914678390",
+            "correo": "info@salamatisse.com",
+            "enlace_maps": "https://www.google.es/maps/place/Matisse+Club/@39.4707495,-0.351402,16z/data=!3m1!4b1!4m6!3m5!1s0xd60488e03e9d3c1:0xf43d51a4ac783de9!8m2!3d39.4707455!4d-0.3465311!16s%2Fm%2F0k53zjx?hl=es&entry=ttu"
+        },
+        "fecha": "2024-10-01",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Vetusta Morla",
+            "descripcion": "Banda de indie rock con gran influencia en la escena musical española.",
+            "genero": "Indie Rock",
+            "ciudad": "Madrid",
+            "pais": "España",
+            "imagen": "img/grupos/vetusta_morla.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/5B0iemuYUMgOv57Cm9L1a7"
+        },
+        "imagen": "img/carteles/Vetusta_Morla_Valencia.jpg",
+        "cantidad_entradas": 700,
+        "precio_entradas": 35,
+        "cantidad_entradas_vip": 70,
+        "precio_entradas_vip": 70,
+        "promotor": "eventos"
+    },
+    {
+        "nombre": "Hard GZ en Granada",
+        "recinto": {
+            "nombre": "Sala El Tren",
+            "direccion": " Ctra. de Málaga, 136",
+            "ciudad": " Granada",
+            "telefono": "958296207",
+            "correo": "info@salaeltren.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+El+Tren/@37.1906641,-3.637935,16z/data=!3m1!4b1!4m6!3m5!1s0xd71fc4f1fa3fc0d:0x3204c91c52ec0184!8m2!3d37.1906599!4d-3.6353601!16s%2Fg%2F1pyd3tj5n?hl=es&entry=ttu"
+        },
+        "fecha": "2024-04-15",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Hard GZ",
+            "descripcion": "Hard GZ es un artista versátil y comprometido que ha logrado posicionarse como un referente del rap español actual.",
+            "genero": "Rap",
+            "ciudad": "Vigo",
+            "pais": "España",
+            "imagen": "img/grupos/hardgz.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/3FONxnePzPucdTnmDqS4Gm"
+        },
+        "imagen": "img/carteles/Hardgz_Granada.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Victor Rutty en Bilbao",
+        "recinto": {
+            "nombre": "Kafe Antzokia",
+            "direccion": "Done Bikendi Kalea, 2",
+            "ciudad": "Bilbao",
+            "telefono": "944244625",
+            "correo": "info@kafeantzokia.eus",
+            "enlace_maps": "https://www.google.com/maps/place/Kafe+Antzokia/@43.260897,-2.930444,17z/data=!3m1!4b1!4m6!3m5!1s0xd71e6b5bcb59a69:0x54e67da8e2c0e807!8m2!3d43.2608931!4d-2.9282551!16s%2Fg%2F1hg44w0z5?hl=es&entry=ttu"
+        },
+        "fecha": "2024-05-15",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Víctor Rutty",
+            "descripcion": "Víctor Rutty es un rapero destacado que ha influido profundamente en la escena del rap español.",
+            "genero": "Rap",
+            "ciudad": "Burgos",
+            "pais": "España",
+            "imagen": "img/grupos/victorrutty.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/6oFS4IZkZvx91jiVVW0YDL"
+        },
+        "imagen": "img/carteles/Victor_Rutty_Bilbao.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Hard GZ en Valencia",
+        "recinto": {
+            "nombre": "Sala El Tren",
+            "direccion": " Ctra. de Málaga, 136",
+            "ciudad": " Granada",
+            "telefono": "958296207",
+            "correo": "info@salaeltren.com",
+            "enlace_maps": "https://www.google.es/maps/place/Sala+El+Tren/@37.1906641,-3.637935,16z/data=!3m1!4b1!4m6!3m5!1s0xd71fc4f1fa3fc0d:0x3204c91c52ec0184!8m2!3d37.1906599!4d-3.6353601!16s%2Fg%2F1pyd3tj5n?hl=es&entry=ttu"
+        },
+        "fecha": "2024-05-31",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Hard GZ",
+            "descripcion": "Hard GZ es un artista versátil y comprometido que ha logrado posicionarse como un referente del rap español actual.",
+            "genero": "Rap",
+            "ciudad": "Vigo",
+            "pais": "España",
+            "imagen": "img/grupos/hardgz.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/3FONxnePzPucdTnmDqS4Gm"
+        },
+        "imagen": "img/carteles/Hardgz_Valencia.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    {
+        "nombre": "Victor Rutty en Zaragoza",
+        "recinto": {
+            "nombre": "Sala Oasis Club Teatro",
+            "direccion": "Calle Boggiero, 28",
+            "ciudad": "Zaragoza",
+            "telefono": "976436935",
+            "correo": "info@oasisteatro.com",
+            "enlace_maps": "https://www.google.es/maps/place/Oasis+Club+Teatro/@41.6551744,-0.8905603,17z/data=!3m1!4b1!4m6!3m5!1s0xd5914ea61e529c9:0xaec7681450c6c28c!8m2!3d41.6551705!4d-0.8856894!16s%2Fg%2F1tf3_px9?hl=es&entry=ttu" 
+        },
+        "fecha": "2024-06-14",
+        "hora": "21:00",
+        "grupo": {
+            "nombre": "Víctor Rutty",
+            "descripcion": "Víctor Rutty es un rapero destacado que ha influido profundamente en la escena del rap español.",
+            "genero": "Rap",
+            "ciudad": "Burgos",
+            "pais": "España",
+            "imagen": "img/grupos/victorrutty.jpg",
+            "perfil_spotify": "https://open.spotify.com/artist/6oFS4IZkZvx91jiVVW0YDL"
+        },
+        "imagen": "img/carteles/Victor_Rutty_Zaragoza.jpg",
+        "cantidad_entradas": 800,
+        "precio_entradas": 25,
+        "cantidad_entradas_vip": 80,
+        "precio_entradas_vip": 50,
+        "promotor": "admin"
+    },
+    ]
+}
