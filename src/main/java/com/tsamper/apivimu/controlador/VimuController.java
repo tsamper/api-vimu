@@ -470,20 +470,27 @@ public class VimuController {
         GuardadoDao.eliminarGuardado(concierto, usuarioActivo);
     }
 
-    public void registrarComentario(Concierto concierto, String comentario, OpcionesOpinion recomendado){
+    @PostMapping("/opiniones/{idConcierto}/{idUsuario}")
+    public void registrarComentario(@PathVariable int idConcierto,
+    		@PathVariable int idUsuario, 
+    		@RequestParam OpcionesOpinion recomendado,
+    		@RequestBody String comentario){
+    	Concierto concierto = ConciertoDao.buscarConciertoPorId(idConcierto);
         Opinion opinion = new Opinion();
         opinion.setComentario(comentario);
-        opinion.setUsuario(usuarioActivo);
+        opinion.setUsuario(UsuarioDao.obtenerUsuarioPorId(idUsuario));
         opinion.setGrupo(concierto.getGrupo());
         opinion.setConcierto(concierto);
         opinion.setRecomendado(recomendado);
         OpinionDao.introducirOpinion(opinion);
     }
 
-    public List<Opinion> obtenerOpinionesPorGrupo(Grupo grupo){
-        return OpinionDao.buscarOpinionesPorGrupo(grupo);
+    @GetMapping("/opiniones?grupo={grupo}")
+    public List<Opinion> obtenerOpinionesPorGrupo(@PathVariable int grupoId){
+        return OpinionDao.buscarOpinionesPorGrupo(GrupoDao.obtenerGrupoPorId(grupoId));
     }
 
+    
     public boolean comprobarComentarioPorUsuarioYConcierto(Concierto concierto){
         return OpinionDao.buscarOpinionesPorUsuarioYConcierto(usuarioActivo, concierto);
     }

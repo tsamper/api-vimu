@@ -8,7 +8,5 @@ public class ApiVimuApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiVimuApplication.class, args);
-		
 	}
-	
 }
