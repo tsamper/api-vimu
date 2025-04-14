@@ -29,10 +29,6 @@ import java.util.stream.Collectors;
 
 @RestController
 public class VimuController {
-   
-    public Usuario usuarioActivo = null;
-
-    
 
     public void conectarBBDD(){
         ConexionBBDD.crearConexion();
@@ -200,6 +196,7 @@ public class VimuController {
         return opiniones;
     }
 
+    @GetMapping("/crearRegistros")
     public void importar(){
         try {
             File archivoUsuarios = new File(Constantes.DIR_JSON_USUARIOS);
@@ -286,8 +283,9 @@ public class VimuController {
     }
     
     @PostMapping("/conciertos")
-    public void registrarConcierto(@RequestBody Concierto concierto){
-        ConciertoDao.introducirConcierto(concierto, usuarioActivo);
+    public void registrarConcierto(@RequestBody Concierto concierto, @RequestParam int user){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        ConciertoDao.introducirConcierto(concierto, usuario);
     }
 
     @PostMapping("/recintos")
@@ -317,14 +315,16 @@ public class VimuController {
 	    @RequestBody Concierto concierto, 
 	    @PathVariable String tipo, 
 	    @PathVariable String campo,
+	    @RequestParam int user,
 	    @RequestParam int cantidadSeleccionada) {
 		
+		Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
 	    if ("normal".equalsIgnoreCase(tipo)) {
 	        for (int i = 0; i < cantidadSeleccionada; i++) {
 	            EntradaConcierto entrada = new EntradaConcierto();
 	            entrada.setConcierto(concierto);
 	            entrada.setPrecio(concierto.getPrecioEntradas());
-	            entrada.setUsuario(usuarioActivo);
+	            entrada.setUsuario(usuario);
 	            entrada.setTipo("Normal");
 	            entrada.setFechaCompra(LocalDateTime.now());
 	            EntradaDao.introducirEntradaConcierto(entrada);
@@ -335,7 +335,7 @@ public class VimuController {
 	            EntradaConcierto entrada = new EntradaConcierto();
 	            entrada.setConcierto(concierto);
 	            entrada.setPrecio(concierto.getPrecioEntradasVip());
-	            entrada.setUsuario(usuarioActivo);
+	            entrada.setUsuario(usuario);
 	            entrada.setTipo("Vip");
 	            entrada.setFechaCompra(LocalDateTime.now());
 	            EntradaDao.introducirEntradaConcierto(entrada);
@@ -357,10 +357,12 @@ public class VimuController {
     }
 
     @PostMapping("/conciertosGuardados")
-    public int guardarConciertoGuardado(@RequestBody Concierto concierto){
-        return GuardadoDao.introducirConciertoGuardado(concierto, usuarioActivo);
+    public int guardarConciertoGuardado(@RequestBody Concierto concierto, @RequestParam int user){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        return GuardadoDao.introducirConciertoGuardado(concierto, usuario);
     }
 /*
+ //CAMBIAR PARA PODER SUBIR IMAGEN DESDE EL MOVIL
     public String guardarImagenGrupo(File selectedFile, Label imagenSeleccionada){
         if (selectedFile != null) {
             try {
@@ -412,8 +414,9 @@ public class VimuController {
     }
 
     @GetMapping("/entradas")
-    public Map<String, List<EntradaConcierto>> obtenerEntradasConcierto(){
-        List<EntradaConcierto> entradas = EntradaDao.buscarEntradasPorUsuario(usuarioActivo);
+    public Map<String, List<EntradaConcierto>> obtenerEntradasConcierto(@RequestParam int user){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        List<EntradaConcierto> entradas = EntradaDao.buscarEntradasPorUsuario(usuario);
         Map<String, List<EntradaConcierto>> entradasPorConcierto = new HashMap<>();
         for (EntradaConcierto entrada : entradas) {
             entradasPorConcierto
@@ -423,19 +426,20 @@ public class VimuController {
         return entradasPorConcierto;
     }
 
-    @GetMapping("/conciertos?promotor={promotor}")
-    public List<Concierto> obtenerConciertosPorPromotor(@PathVariable int promotor){
+    @GetMapping("/conciertos")
+    public List<Concierto> obtenerConciertosPorPromotor(@RequestParam int promotor){
         return ConciertoDao.buscarConciertoPorPromotor(promotor);
     }
 
-    @GetMapping("/canciones?grupoId={grupoId}")
-    public List<Cancion> obtenerCancionesPorGrupo(@PathVariable int grupoId){
+    @GetMapping("/canciones")
+    public List<Cancion> obtenerCancionesPorGrupo(@RequestParam int grupoId){
         return CancionDao.buscarCancionPorGrupo(grupoId);
     }
 
-    
-    public List<Concierto> obtenerConciertosGuardadosPorUsuario(){
-        return GuardadoDao.buscarGuardadosPorUsuario(usuarioActivo);
+    @GetMapping("/conciertos")
+    public List<Concierto> obtenerConciertosGuardadosPorUsuario(@RequestParam int user){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        return GuardadoDao.buscarGuardadosPorUsuario(usuario);
     }
 
     @GetMapping("/conciertos/filtro?{filtro}={campo}")
@@ -449,8 +453,10 @@ public class VimuController {
         return conciertos;
     }
 
-    public Map<String, List<Concierto>> obtenerConciertosAnteriores(){
-        List<Concierto> conciertos = ConciertoDao.buscarConciertosPorUsuarioYFechaAnterior(usuarioActivo);
+    @GetMapping("/conciertos")
+    public Map<String, List<Concierto>> obtenerConciertosAnteriores(@RequestParam int user){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        List<Concierto> conciertos = ConciertoDao.buscarConciertosPorUsuarioYFechaAnterior(usuario);
         Map<String, List<Concierto>> entradasPorConcierto = new HashMap<>();
         for (Concierto concierto : conciertos) {
             entradasPorConcierto
@@ -465,9 +471,11 @@ public class VimuController {
         CancionDao.introducirCancion(cancion);
     }
 
-    @DeleteMapping("/guardados")
-    public void eliminarGuardado(Concierto concierto){
-        GuardadoDao.eliminarGuardado(concierto, usuarioActivo);
+    @DeleteMapping("/guardados/{idConcierto}")
+    public void eliminarGuardado(@RequestParam int user, @PathVariable int idConcierto){
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+    	Concierto concierto = ConciertoDao.buscarConciertoPorId(idConcierto);
+        GuardadoDao.eliminarGuardado(concierto, usuario);
     }
 
     @PostMapping("/opiniones/{idConcierto}/{idUsuario}")
@@ -485,14 +493,16 @@ public class VimuController {
         OpinionDao.introducirOpinion(opinion);
     }
 
-    @GetMapping("/opiniones?grupo={grupo}")
-    public List<Opinion> obtenerOpinionesPorGrupo(@PathVariable int grupoId){
+    @GetMapping("/opiniones")
+    public List<Opinion> obtenerOpinionesPorGrupo(@RequestParam int grupoId){
         return OpinionDao.buscarOpinionesPorGrupo(GrupoDao.obtenerGrupoPorId(grupoId));
     }
 
-    
-    public boolean comprobarComentarioPorUsuarioYConcierto(Concierto concierto){
-        return OpinionDao.buscarOpinionesPorUsuarioYConcierto(usuarioActivo, concierto);
+    @GetMapping("/opiniones/{idConcierto}")
+    public boolean comprobarComentarioPorUsuarioYConcierto(@RequestParam int user, @PathVariable int idConcierto){
+    	Concierto concierto = ConciertoDao.buscarConciertoPorId(idConcierto);
+    	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
+        return OpinionDao.buscarOpinionesPorUsuarioYConcierto(usuario, concierto);
     }
 
 
