@@ -9,7 +9,20 @@ public class Usuario {
     private String contrasenya;
     private GrupoUsuarios grupoUsuarios;
 
-    public int getId() {
+    
+    public Usuario(){}
+   
+    public Usuario(int id, String nombre, String apellidos, String email, String nomUsuario, String contrasenya) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.email = email;
+		this.nomUsuario = nomUsuario;
+		this.contrasenya = contrasenya;
+	}
+
+	public int getId() {
         return id;
     }
 

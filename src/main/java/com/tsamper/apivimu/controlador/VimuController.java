@@ -9,6 +9,9 @@ import com.tsamper.apivimu.modelo.constantes.Constantes;
 import com.tsamper.apivimu.modelo.daos.*;
 import com.tsamper.apivimu.modelo.enums.OpcionesOpinion;
 import com.tsamper.apivimu.modelo.enums.Privilegios;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
@@ -238,10 +241,15 @@ public class VimuController {
     	return ejemplo;
     }
     
-    @GetMapping("/usuarios")
-    public Usuario iniciarSesion(String user, String contrasenya, Concierto concierto){
-        Usuario usuario = UsuarioDao.comprobarUsuario(user, contrasenya);
-        return usuario;
+    @PostMapping("/usuarios/buscar")
+    public ResponseEntity<Usuario> iniciarSesion(@RequestBody LoginRequest login){
+        //Usuario usuario = UsuarioDao.comprobarUsuario(login.getUser(), login.getContrasenya());
+    	Usuario usuario = new Usuario(1, "ejemplop", "erwerwe", "asdads@asdas.com", "nomUsuer", "pasword123" );
+        if (usuario != null) {
+            return ResponseEntity.ok(usuario);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
     }
 
     @GetMapping("/conciertos")
