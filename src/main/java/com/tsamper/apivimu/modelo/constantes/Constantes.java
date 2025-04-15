@@ -8,6 +8,4 @@ public class Constantes {
     public static final String DIR_JSON_OPINIONES = System.getProperty("user.dir") + "\\src\\main\\resources\\json\\comentarios.json";
     public static final String ENLACE = "jdbc:mariadb://localhost:";
     public static final String PUERTO = "3307";
-    public static final int TAMANYO_VENTANA_VERTICAL = 750;
-    public static final int TAMANYO_VENTANA_HORIZONTAL = 1200;
 }

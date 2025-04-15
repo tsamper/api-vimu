@@ -83,7 +83,8 @@ public class VimuController {
                 grupo.setImagen(jsonGrupo.getString("imagen"));
                 grupo.setPerfilSpotify(jsonGrupo.getString("perfil_spotify"));
                 concierto.setGrupo(grupo);
-                concierto.setPromotor(UsuarioDao.obtenerUsuarioPorNomUsuario(jsonConcierto.getString("promotor")));
+                //concierto.setPromotor(UsuarioDao.obtenerUsuarioPorNomUsuario(jsonConcierto.getString("promotor")));
+                concierto.setPromotor(null);
                 conciertos.add(concierto);
             }
         }catch (IOException e){
@@ -254,8 +255,14 @@ public class VimuController {
 
     @GetMapping("/conciertos")
     public ArrayList<Concierto> obtenerConciertos(){
-       ArrayList<Concierto> conciertos = new ArrayList<>();
-        try{
+    	File archivoConciertos = new File(Constantes.DIR_JSON_CONCIERTOS);
+    	List<Concierto> con = guardarConciertos(archivoConciertos);
+    	System.out.println(con.size());
+    	ArrayList<Concierto> conciertos = new ArrayList<>();
+    	conciertos.addAll(con);
+    	System.out.println(conciertos.size());
+        /*try{
+        	
             ResultSet rs = ConciertoDao.buscarConciertosPorFecha();
             if (rs != null) {
                 while (rs.next()) {
@@ -274,14 +281,14 @@ public class VimuController {
                     concierto.setPrecioEntradasVip(rs.getInt("precio_entradas_vip"));
                     concierto.setGrupo(GrupoDao.obtenerGrupoPorId(rs.getInt("grupo")));
                     conciertos.add(concierto);
-                }
+                }*/
                 return conciertos;
-
+/*
             }
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        return null;
+        return null;*/
    }
     
 
