@@ -233,8 +233,15 @@ public class VimuController {
     }
     
     @GetMapping("/demo")
-    public String prueba() {
-    	return "Ejemplo de llamada GET";
+    public Ejemplo prueba() {
+    	Ejemplo ejemplo = new Ejemplo("Hola desde el servidor");
+    	return ejemplo;
+    }
+    
+    @GetMapping("/usuarios")
+    public Usuario iniciarSesion(String user, String contrasenya, Concierto concierto){
+        Usuario usuario = UsuarioDao.comprobarUsuario(user, contrasenya);
+        return usuario;
     }
 
     @GetMapping("/conciertos")
@@ -426,7 +433,7 @@ public class VimuController {
         return entradasPorConcierto;
     }
 
-    @GetMapping("/conciertos")
+    @GetMapping("/conciertos/promotor/")
     public List<Concierto> obtenerConciertosPorPromotor(@RequestParam int promotor){
         return ConciertoDao.buscarConciertoPorPromotor(promotor);
     }
@@ -436,7 +443,7 @@ public class VimuController {
         return CancionDao.buscarCancionPorGrupo(grupoId);
     }
 
-    @GetMapping("/conciertos")
+    @GetMapping("/conciertos/guardados/")
     public List<Concierto> obtenerConciertosGuardadosPorUsuario(@RequestParam int user){
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         return GuardadoDao.buscarGuardadosPorUsuario(usuario);
@@ -453,7 +460,7 @@ public class VimuController {
         return conciertos;
     }
 
-    @GetMapping("/conciertos")
+    @GetMapping("/conciertos/old/")
     public Map<String, List<Concierto>> obtenerConciertosAnteriores(@RequestParam int user){
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         List<Concierto> conciertos = ConciertoDao.buscarConciertosPorUsuarioYFechaAnterior(usuario);
