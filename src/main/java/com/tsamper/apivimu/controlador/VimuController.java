@@ -253,6 +253,8 @@ public class VimuController {
         }
     }
 
+    
+    //Temporal, despues solo servirá para añadir el json de los conceirtos a la BBDD 
     @GetMapping("/conciertos")
     public ArrayList<Concierto> obtenerConciertos(){
     	File archivoConciertos = new File(Constantes.DIR_JSON_CONCIERTOS);
@@ -260,7 +262,6 @@ public class VimuController {
     	System.out.println(con.size());
     	ArrayList<Concierto> conciertos = new ArrayList<>();
     	conciertos.addAll(con);
-    	System.out.println(conciertos.size());
         /*try{
         	
             ResultSet rs = ConciertoDao.buscarConciertosPorFecha();
@@ -289,8 +290,14 @@ public class VimuController {
             System.out.println(e.getMessage());
         }
         return null;*/
-   }
+    }
+   
     
+    @GetMapping("/conciertos/{id}")
+    public Concierto obtenerConciertoPorId(@PathVariable int id){
+		Concierto concierto = ConciertoDao.buscarConciertoPorId(id);
+		return concierto;
+    }
 
     @PostMapping("/usuarios")
     public boolean registrarUsuario(@RequestBody Usuario usuario) {
