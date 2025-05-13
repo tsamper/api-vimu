@@ -3,6 +3,7 @@ package com.tsamper.apivimu.controlador;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import com.tsamper.apivimu.ApiVimuApplication;
 import com.tsamper.apivimu.modelo.*;
 import com.tsamper.apivimu.modelo.bbdd.ConexionBBDD;
 import com.tsamper.apivimu.modelo.constantes.Constantes;
@@ -32,6 +33,12 @@ import java.util.stream.Collectors;
 
 @RestController
 public class VimuController {
+
+    private final ApiVimuApplication apiVimuApplication;
+
+    VimuController(ApiVimuApplication apiVimuApplication) {
+        this.apiVimuApplication = apiVimuApplication;
+    }
 
     public void conectarBBDD(){
         ConexionBBDD.crearConexion();
@@ -257,14 +264,9 @@ public class VimuController {
     //Temporal, despues solo servirá para añadir el json de los conceirtos a la BBDD 
     @GetMapping("/conciertos")
     public ArrayList<Concierto> obtenerConciertos(){
-    	File archivoConciertos = new File(Constantes.DIR_JSON_CONCIERTOS);
-    	List<Concierto> con = guardarConciertos(archivoConciertos);
-    	System.out.println(con.size());
-    	ArrayList<Concierto> conciertos = new ArrayList<>();
-    	conciertos.addAll(con);
-        /*try{
-        	
-            ResultSet rs = ConciertoDao.buscarConciertosPorFecha();
+        try{
+        	ArrayList<Concierto> conciertos = new ArrayList<>();
+            ResultSet rs = ConciertoDao.buscarTodosConciertos();
             if (rs != null) {
                 while (rs.next()) {
                     Concierto concierto = new Concierto();
@@ -282,14 +284,13 @@ public class VimuController {
                     concierto.setPrecioEntradasVip(rs.getInt("precio_entradas_vip"));
                     concierto.setGrupo(GrupoDao.obtenerGrupoPorId(rs.getInt("grupo")));
                     conciertos.add(concierto);
-                }*/
+                }
                 return conciertos;
-/*
             }
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        return null;*/
+        return null;
     }
    
     
