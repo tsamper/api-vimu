@@ -1,0 +1,260 @@
+{
+    "canciones":[
+        {
+            "titulo": "Medallones",
+            "grupo": "Hoke",
+            "enlace_youtube": "https://www.youtube.com/embed/Q932Vg7UmyQ"
+        },
+        {
+            "titulo": "96ERS",
+            "grupo": "Hoke",
+            "enlace_youtube": "https://www.youtube.com/embed/ockzzfKbFOE"
+        },
+        {
+            "titulo": "Five O",
+            "grupo": "Hoke",
+            "enlace_youtube": "https://www.youtube.com/embed/u1kGn_A_17c"
+        },
+        {
+            "titulo": "Sé de un lugar",
+            "grupo": "Jaro Cristo",
+            "enlace_youtube": "https://www.youtube.com/embed/qB6b_rWuzqk"
+        },
+        {
+            "titulo": "Andrómeda",
+            "grupo": "Jaro Cristo",
+            "enlace_youtube": "https://www.youtube.com/embed/DHsp5Yt9Uas"
+        },
+        {
+            "titulo": "Insomnia",
+            "grupo": "Jaro Cristo",
+            "enlace_youtube": "https://www.youtube.com/embed/w74_C4y8Aus"
+        },
+        {
+            "titulo": "Filosofía callejera",
+            "grupo": "Victor Rutty",
+            "enlace_youtube": "https://www.youtube.com/embed/oyykJE2W6Qk"
+        },
+        {
+            "titulo": "Dicen que",
+            "grupo": "Victor Rutty",
+            "enlace_youtube": "https://www.youtube.com/embed/bzmha8Fy24U"
+        },
+        {
+            "titulo": "La tontería",
+            "grupo": "Victor Rutty",
+            "enlace_youtube": "https://www.youtube.com/embed/GAErQtI9oB4"
+        },
+        {
+            "titulo": "Malamente",
+            "grupo": "Rosalía",
+            "enlace_youtube": "https://www.youtube.com/embed/Rht7rBHuXW8"
+        },
+        {
+            "titulo": "Pienso En Tu Mirá",
+            "grupo": "Rosalía",
+            "enlace_youtube": "https://www.youtube.com/embed/p_4coiRG_BI"
+        },
+        {
+            "titulo": "Con Altura",
+            "grupo": "Rosalía",
+            "enlace_youtube": "https://www.youtube.com/embed/p7bfOZek9t4"
+        },
+        {
+            "titulo": "Piensa en mí",
+            "grupo": "Luz Casal",
+            "enlace_youtube": "https://www.youtube.com/embed/0P16n3UUsW4"
+        },
+        {
+            "titulo": "Entre mis recuerdos",
+            "grupo": "Luz Casal",
+            "enlace_youtube": "https://www.youtube.com/embed/ldGZEVJ7k5Y"
+        },
+        {
+            "titulo": "No me importa nada",
+            "grupo": "Luz Casal",
+            "enlace_youtube": "https://www.youtube.com/embed/x4zleV7v0K4"
+        },
+        {
+            "titulo": "Copenhague",
+            "grupo": "Vetusta Morla",
+            "enlace_youtube": "https://www.youtube.com/embed/N-E-UoO1L4M"
+        },
+        {
+            "titulo": "La Deriva",
+            "grupo": "Vetusta Morla",
+            "enlace_youtube": "https://www.youtube.com/embed/MBR5EQd8XDU"
+        },
+        {
+            "titulo": "Los Días Raros",
+            "grupo": "Vetusta Morla",
+            "enlace_youtube": "https://www.youtube.com/embed/ifdHA-6OyjI"
+        },
+        {
+            "titulo": "Allí Donde Solíamos Gritar",
+            "grupo": "Love of Lesbian",
+            "enlace_youtube": "https://www.youtube.com/embed/8lHcJcAqNNo"
+        },
+        {
+            "titulo": "Belice",
+            "grupo": "Love of Lesbian",
+            "enlace_youtube": "https://www.youtube.com/embed/1OSWnxsAoJY"
+        },
+        {
+            "titulo": "1999",
+            "grupo": "Love of Lesbian",
+            "enlace_youtube": "https://www.youtube.com/embed/EpstB_DHLnY"
+        },
+        {
+            "titulo": "Día Gris",
+            "grupo": "Hard GZ",
+            "enlace_youtube": "https://www.youtube.com/embed/13PiRjfIImw"
+        },
+        {
+            "titulo": "Lo Real",
+            "grupo": "Hard GZ",
+            "enlace_youtube": "https://www.youtube.com/embed/I96S7SxeVV0"
+        },
+        {
+            "titulo": "Libre",
+            "grupo": "Hard GZ",
+            "enlace_youtube": "https://www.youtube.com/embed/hh1sY-h9N5E"
+        },
+        {
+            "titulo": "Renacimiento",
+            "grupo": "Kase.O",
+            "enlace_youtube": "https://www.youtube.com/embed/g_8hU6DyiWU"
+        },
+        {
+            "titulo": "Esto No Para",
+            "grupo": "Kase.O",
+            "enlace_youtube": "https://www.youtube.com/embed/9JAAh8P-PnU"
+        },
+        {
+            "titulo": "Mitad y Mitad",
+            "grupo": "Kase.O",
+            "enlace_youtube": "https://www.youtube.com/embed/zDZo9YOqcwM"
+        },
+        {
+            "titulo": "Cero",
+            "grupo": "Dani Martín",
+            "enlace_youtube": "https://www.youtube.com/embed/V16deMXb_4Q"
+        },
+        {
+            "titulo": "Que Bonita la Vida",
+            "grupo": "Dani Martín",
+            "enlace_youtube": "https://www.youtube.com/embed/LfA2K2RIz7I"
+        },
+        {
+            "titulo": "La Mentira",
+            "grupo": "Dani Martín",
+            "enlace_youtube": "https://www.youtube.com/embed/6ZjNkrwsrbc"
+        },
+        {
+            "titulo": "Delito",
+            "grupo": "Nathy Peluso",
+            "enlace_youtube": "https://www.youtube.com/embed/dRkU0qZt8jo"
+        },
+        {
+            "titulo": "La Sandunguera",
+            "grupo": "Nathy Peluso",
+            "enlace_youtube": "https://www.youtube.com/embed/tbCDN4hP1Hk"
+        },
+        {
+            "titulo": "Business Woman",
+            "grupo": "Nathy Peluso",
+            "enlace_youtube": "https://www.youtube.com/embed/qXz_HSceXJo"
+        },
+        {
+            "titulo": "La Niña",
+            "grupo": "Mala Rodríguez",
+            "enlace_youtube": "https://www.youtube.com/embed/R1p-G-6O9Bw"
+        },
+        {
+            "titulo": "Yo Marco el Minuto",
+            "grupo": "Mala Rodríguez",
+            "enlace_youtube": "https://www.youtube.com/embed/trH99G6rsAM"
+        },
+        {
+            "titulo": "Quien Manda",
+            "grupo": "Mala Rodríguez",
+            "enlace_youtube": "https://www.youtube.com/embed/s_sDdbBRx-Q"
+        },
+        {
+            "titulo": "Solamente Tú",
+            "grupo": "Pablo Alborán",
+            "enlace_youtube": "https://www.youtube.com/embed/Rhf2O_hVyLc"
+        },
+        {
+            "titulo": "Saturno",
+            "grupo": "Pablo Alborán",
+            "enlace_youtube": "https://www.youtube.com/embed/FQLGhPHzxjc"
+        },
+        {
+            "titulo": "Prometo",
+            "grupo": "Pablo Alborán",
+            "enlace_youtube": "https://www.youtube.com/embed/D2aLq8nJ8k"
+        },
+        {
+            "titulo": "La Raja de Tu Falda",
+            "grupo": "Estopa",
+            "enlace_youtube": "https://www.youtube.com/embed/e14V7MFqih4"
+        },
+        {
+            "titulo": "Fuente de Energía",
+            "grupo": "Estopa",
+            "enlace_youtube": "https://www.youtube.com/embed/wD2a0DLDDI4"
+        },
+        {
+            "titulo": "Partiendo la Pana",
+            "grupo": "Estopa",
+            "enlace_youtube": "https://www.youtube.com/embed/W-cDSfN3nfg"
+        },
+        {
+            "titulo": "Copacabana",
+            "grupo": "Izal",
+            "enlace_youtube": "https://www.youtube.com/embed/w0LrOAVv6kY"
+        },
+        {
+            "titulo": "La Mujer de Verde",
+            "grupo": "Izal",
+            "enlace_youtube": "https://www.youtube.com/embed/Z2ikpD4ezoA"
+        },
+        {
+            "titulo": "El Baile",
+            "grupo": "Izal",
+            "enlace_youtube": "https://www.youtube.com/embed/VVFrrgTlB34"
+        },
+        {
+            "titulo": "Ya No Quiero Ná",
+            "grupo": "Lola Indigo",
+            "enlace_youtube": "https://www.youtube.com/embed/_aDRWsAqW3s"
+        },
+        {
+            "titulo": "Mujer Bruja",
+            "grupo": "Lola Indigo",
+            "enlace_youtube": "https://www.youtube.com/embed/v=ZAnQlKSpJoI"
+        },
+        {
+            "titulo": "4 Besos",
+            "grupo": "Lola Indigo",
+            "enlace_youtube": "https://www.youtube.com/embed/IA2y-bJQqP0"
+        },
+        {
+            "titulo": "Lo Siento",
+            "grupo": "Beret",
+            "enlace_youtube": "https://www.youtube.com/embed/67GYzckP4y0"
+        },
+        {
+            "titulo": "Me Llama",
+            "grupo": "Beret",
+            "enlace_youtube": "https://www.youtube.com/embed/FvGZS_6n0Z4"
+        },
+        {
+            "titulo": "Vuelve",
+            "grupo": "Beret",
+            "enlace_youtube": "https://www.youtube.com/embed/rYodeDzcT7w"
+        }
+    ]
+}
+        

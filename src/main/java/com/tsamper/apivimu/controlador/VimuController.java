@@ -90,8 +90,7 @@ public class VimuController {
                 grupo.setImagen(jsonGrupo.getString("imagen"));
                 grupo.setPerfilSpotify(jsonGrupo.getString("perfil_spotify"));
                 concierto.setGrupo(grupo);
-                //concierto.setPromotor(UsuarioDao.obtenerUsuarioPorNomUsuario(jsonConcierto.getString("promotor")));
-                concierto.setPromotor(null);
+                concierto.setPromotor(UsuarioDao.obtenerUsuarioPorNomUsuario(jsonConcierto.getString("promotor")));
                 conciertos.add(concierto);
             }
         }catch (IOException e){
@@ -243,16 +242,22 @@ public class VimuController {
         }
     }
     
-    @GetMapping("/demo")
-    public Ejemplo prueba() {
-    	Ejemplo ejemplo = new Ejemplo("Hola desde el servidor");
+    @GetMapping("/crearConexion")
+    public String crearConexion() {
+    	String ejemplo = "Conexión y base de datos creada correctamente";
+    	ConexionBBDD.crearConexion();
+    	 if (ConexionBBDD.getConnection() == null) {
+    	        throw new RuntimeException("No se pudo establecer conexión como root.");
+    	    }
+    	ConexionBBDD.crearUsuario();
+    	ConexionBBDD.conectar();
+    	ConexionBBDD.crearTablas();
     	return ejemplo;
     }
     
     @PostMapping("/usuarios/buscar")
     public ResponseEntity<Usuario> iniciarSesion(@RequestBody LoginRequest login){
-        //Usuario usuario = UsuarioDao.comprobarUsuario(login.getUser(), login.getContrasenya());
-    	Usuario usuario = new Usuario(1, "ejemplop", "erwerwe", "asdads@asdas.com", "nomUsuer", "pasword123" );
+        Usuario usuario = UsuarioDao.comprobarUsuario(login.getUser(), login.getContrasenya());
         if (usuario != null) {
             return ResponseEntity.ok(usuario);
         } else {
@@ -261,7 +266,7 @@ public class VimuController {
     }
 
     
-    //Temporal, despues solo servirá para añadir el json de los conceirtos a la BBDD 
+    
     @GetMapping("/conciertos")
     public ArrayList<Concierto> obtenerConciertos(){
         try{
@@ -303,7 +308,6 @@ public class VimuController {
     @PostMapping("/usuarios")
     public boolean registrarUsuario(@RequestBody Usuario usuario) {
         int resultado = UsuarioDao.introducirUsuario(usuario);
-        System.out.println(resultado);
         if (resultado == 0) {
             return false;
         }else{

@@ -11,7 +11,7 @@ public class ConexionBBDD {
 
     public static void crearConexion(){
         String user = "root";
-        String password = "root";
+        String password = "";
         String url = Constantes.ENLACE +  Constantes.PUERTO;
         try{
             connection = DriverManager.getConnection(url, user, password);

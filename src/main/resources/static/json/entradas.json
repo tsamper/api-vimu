@@ -1,0 +1,18 @@
+{
+    "entradas": [
+      {
+        "precio": 50.0,
+        "usuario": "user",
+        "tipo": "Normal",
+        "fecha_compra": "2023-06-01T19:30:00",
+        "concierto": "Hard GZ en Granada"
+      },
+      {
+        "precio": 100.0,
+        "usuario": "user",
+        "tipo": "VIP",
+        "fecha_compra": "2023-06-02T18:45:00",
+        "concierto": "Victor Rutty en Bilbao"
+      }
+    ]
+  }
