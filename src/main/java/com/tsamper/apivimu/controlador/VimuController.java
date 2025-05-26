@@ -304,12 +304,14 @@ public class VimuController {
 		Concierto concierto = ConciertoDao.buscarConciertoPorId(id);
 		return concierto;
     }
+
     
     @GetMapping("/usuarios/{id}")
     public Usuario obtenerUsuarioPorId(@PathVariable int id){
 		Usuario usuario = UsuarioDao.obtenerUsuarioPorId(id);
 		return usuario;
     }
+
 
     @PostMapping("/usuarios")
     public boolean registrarUsuario(@RequestBody Usuario usuario) {
@@ -482,6 +484,7 @@ public class VimuController {
         return GuardadoDao.buscarGuardadosPorUsuario(usuario);
     }
 
+
     @GetMapping("/conciertos/filtro")
     public ArrayList<Concierto> buscarConciertos(
             @RequestParam String filtro,
@@ -494,7 +497,6 @@ public class VimuController {
         } else if (filtro.equalsIgnoreCase("Ciudad")) {
             conciertos.addAll(ConciertoDao.buscarConciertosPorCiudadYFecha(campo));
         }
-
         return conciertos;
     }
 
