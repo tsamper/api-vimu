@@ -1,0 +1,20 @@
+{
+    "opiniones": [
+      {
+        "usuario": "user",
+        "grupo":  "Hard GZ",
+        "concierto": "Hard GZ en Granada",
+        "comentario": "¡Concierto increíble, muy recomendado!",
+        "fecha": "2023-12-26",
+        "recomendado": "RECOMENDADO"
+      },
+      {
+        "usuario": "mperez",
+        "grupo":  "Hard GZ",
+        "concierto": "Hard GZ en Valencia",
+        "comentario": "La actuación fue simplemente aceptable.",
+        "fecha": "2023-12-26",
+        "recomendado": "NO_RECOMENDADO"
+      },
+    ]
+  }

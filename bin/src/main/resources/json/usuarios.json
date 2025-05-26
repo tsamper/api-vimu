@@ -1,0 +1,45 @@
+{
+    "usuarios":[
+        {
+        "nombre": "",
+        "apellidos": "",
+        "email": "admin@vimu.com",
+        "nomusuario": "admin",
+        "contrasenya": "admin",
+        "privilegios": {
+            "tipo": "ADMIN"
+            }
+        },
+        {
+        "nombre": "promotor",
+        "apellidos": "",
+        "email": "eventos@musicrepublic.com",
+        "nomusuario": "eventos",
+        "contrasenya": "eventos",
+        "privilegios":  {
+            "tipo": "EVENTO"
+            }
+        },
+        {
+        "nombre": "Tomás",
+        "apellidos": "Samper",
+        "email": "tomas.samper@gmail.com",
+        "nomusuario": "user",
+        "contrasenya": "user",
+        "privilegios":  {
+            "tipo": "USER"
+            }
+        },
+        {
+            "nombre": "María",
+            "apellidos": "Perez",
+            "email": "m.perez@gmail.com",
+            "nomusuario": "mperez",
+            "contrasenya": "mperez",
+            "privilegios":  {
+                "tipo": "USER"
+                }
+        }
+    ]
+}
+        
