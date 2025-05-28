@@ -352,40 +352,35 @@ public class VimuController {
     }
 
     
-	@PostMapping("/entradas/{tipo}/{campo}")
+	@PostMapping("/entradas")
 	public void comprarEntradas(
-	    @RequestBody Concierto concierto, 
-	    @PathVariable String tipo, 
-	    @PathVariable String campo,
+	    @RequestParam int conciertoId,
 	    @RequestParam int user,
-	    @RequestParam int cantidadSeleccionada) {
-		
+	    @RequestParam int cantidadSeleccionadaNormal,
+	    @RequestParam int cantidadSeleccionadaVip) {
+	
 		Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
-	    if ("normal".equalsIgnoreCase(tipo)) {
-	        for (int i = 0; i < cantidadSeleccionada; i++) {
-	            EntradaConcierto entrada = new EntradaConcierto();
-	            entrada.setConcierto(concierto);
-	            entrada.setPrecio(concierto.getPrecioEntradas());
-	            entrada.setUsuario(usuario);
-	            entrada.setTipo("Normal");
-	            entrada.setFechaCompra(LocalDateTime.now());
-	            EntradaDao.introducirEntradaConcierto(entrada);
-	        }
-	        actualizarEntradasNormales(concierto, cantidadSeleccionada);
-	    } else if ("vip".equalsIgnoreCase(tipo)) {
-	        for (int i = 0; i < cantidadSeleccionada; i++) {
-	            EntradaConcierto entrada = new EntradaConcierto();
-	            entrada.setConcierto(concierto);
-	            entrada.setPrecio(concierto.getPrecioEntradasVip());
-	            entrada.setUsuario(usuario);
-	            entrada.setTipo("Vip");
-	            entrada.setFechaCompra(LocalDateTime.now());
-	            EntradaDao.introducirEntradaConcierto(entrada);
-	        }
-	        actualizarEntradasVip(concierto, cantidadSeleccionada);
-	    } else {
-	        throw new IllegalArgumentException("Tipo de entrada inválido");
-	    }
+		Concierto concierto = ConciertoDao.buscarConciertoPorId(conciertoId);
+        for (int i = 0; i < cantidadSeleccionadaNormal; i++) {
+            EntradaConcierto entrada = new EntradaConcierto();
+            entrada.setConcierto(concierto);
+            entrada.setPrecio(concierto.getPrecioEntradas());
+            entrada.setUsuario(usuario);
+            entrada.setTipo("Normal");
+            entrada.setFechaCompra(LocalDateTime.now());
+            EntradaDao.introducirEntradaConcierto(entrada);
+        }
+        actualizarEntradasNormales(concierto, cantidadSeleccionadaNormal);
+        for (int i = 0; i < cantidadSeleccionadaVip; i++) {
+            EntradaConcierto entrada = new EntradaConcierto();
+            entrada.setConcierto(concierto);
+            entrada.setPrecio(concierto.getPrecioEntradasVip());
+            entrada.setUsuario(usuario);
+            entrada.setTipo("Vip");
+            entrada.setFechaCompra(LocalDateTime.now());
+            EntradaDao.introducirEntradaConcierto(entrada);
+        }
+        actualizarEntradasVip(concierto, cantidadSeleccionadaVip);
 	}
 
     public void actualizarEntradasNormales(Concierto concierto, int cantidadSeleccionada){
