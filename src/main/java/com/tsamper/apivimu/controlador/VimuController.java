@@ -473,7 +473,7 @@ public class VimuController {
         return CancionDao.buscarCancionPorGrupo(grupoId);
     }
 
-    @GetMapping("/conciertos/guardados/")
+    @GetMapping("/conciertos/guardados")
     public List<Concierto> obtenerConciertosGuardadosPorUsuario(@RequestParam int user){
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         return GuardadoDao.buscarGuardadosPorUsuario(usuario);
