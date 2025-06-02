@@ -329,6 +329,12 @@ public class VimuController {
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         ConciertoDao.introducirConcierto(concierto, usuario);
     }
+    
+    @GetMapping("/recintos/{id}")
+    public Recinto obtenerRecintoPorId(@PathVariable int id){
+        Recinto recinto = RecintoDao.obtenerRecintoPorId(id);
+        return recinto;
+    }
 
     @PostMapping("/recintos")
     public boolean registrarRecinto(@RequestBody Recinto recinto){
@@ -344,6 +350,12 @@ public class VimuController {
         }
         RecintoDao.introducirRecinto(recinto);
         return true;
+    }
+    
+    @GetMapping("/grupos/{id}")
+    public Grupo obtenerGrupoPorId(@PathVariable int id){
+        Grupo grupo = GrupoDao.obtenerGrupoPorId(id);
+        return grupo;
     }
 
 	@PostMapping("/grupos")
@@ -394,7 +406,8 @@ public class VimuController {
     }
 
     @PostMapping("/conciertosGuardados")
-    public int guardarConciertoGuardado(@RequestBody Concierto concierto, @RequestParam int user){
+    public int guardarConciertoGuardado(@RequestParam int idConcierto, @RequestParam int user){
+    	Concierto concierto = ConciertoDao.buscarConciertoPorId(idConcierto);
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         return GuardadoDao.introducirConciertoGuardado(concierto, usuario);
     }
@@ -495,7 +508,7 @@ public class VimuController {
         return conciertos;
     }
 
-    @GetMapping("/conciertos/old/")
+    @GetMapping("/conciertos/old")
     public Map<String, List<Concierto>> obtenerConciertosAnteriores(@RequestParam int user){
     	Usuario usuario = UsuarioDao.obtenerUsuarioPorId(user);
         List<Concierto> conciertos = ConciertoDao.buscarConciertosPorUsuarioYFechaAnterior(usuario);
