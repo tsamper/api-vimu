@@ -271,7 +271,7 @@ public class VimuController {
     public ArrayList<Concierto> obtenerConciertos(){
         try{
         	ArrayList<Concierto> conciertos = new ArrayList<>();
-            ResultSet rs = ConciertoDao.buscarTodosConciertos();
+            ResultSet rs = ConciertoDao.buscarConciertosPorFecha();
             if (rs != null) {
                 while (rs.next()) {
                     Concierto concierto = new Concierto();
