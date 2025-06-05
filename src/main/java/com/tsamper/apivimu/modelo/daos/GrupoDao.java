@@ -42,7 +42,6 @@ public class GrupoDao {
             ResultSet rs =  statement.executeQuery();
             List<Grupo> grupos = new ArrayList<>();
             while(rs.next()) {
-            rs.next();
             Grupo grupo = new Grupo();
             grupo.setId(rs.getInt("id"));
             grupo.setNombre(rs.getString("nombre"));
