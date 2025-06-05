@@ -335,6 +335,12 @@ public class VimuController {
         Recinto recinto = RecintoDao.obtenerRecintoPorId(id);
         return recinto;
     }
+    
+    @GetMapping("/recintos/{nombre}")
+    public Recinto obtenerRecintoPorNombre(@PathVariable String nombre){
+        Recinto recinto = RecintoDao.obtenerRecintoPorNombre(nombre);
+        return recinto;
+    }
 
     @PostMapping("/recintos")
     public boolean registrarRecinto(@RequestBody Recinto recinto){
@@ -356,6 +362,12 @@ public class VimuController {
     public Grupo obtenerGrupoPorId(@PathVariable int id){
         Grupo grupo = GrupoDao.obtenerGrupoPorId(id);
         return grupo;
+    }
+    
+    @GetMapping("/grupos")
+    public List<Grupo> obtenerGrupos(){
+        List<Grupo> grupos = GrupoDao.obtenerGrupos();
+        return grupos;
     }
 
 	@PostMapping("/grupos")

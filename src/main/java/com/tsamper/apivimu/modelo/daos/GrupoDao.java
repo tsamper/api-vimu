@@ -7,6 +7,8 @@ import com.tsamper.apivimu.modelo.bbdd.ConexionBBDD;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GrupoDao {
     public static void introducirGrupo(Grupo grupo){
@@ -32,6 +34,31 @@ public class GrupoDao {
         }catch (SQLException e) {
             System.out.println("Error al ejecutar la consulta: " + e.getMessage());
         }
+    }
+    
+    public static List<Grupo> obtenerGrupos(){
+        String querySelect = "SELECT * FROM grupos";
+        try (PreparedStatement statement = ConexionBBDD.getConnection().prepareStatement(querySelect)){
+            ResultSet rs =  statement.executeQuery();
+            List<Grupo> grupos = new ArrayList<>();
+            while(rs.next()) {
+            rs.next();
+            Grupo grupo = new Grupo();
+            grupo.setId(rs.getInt("id"));
+            grupo.setNombre(rs.getString("nombre"));
+            grupo.setDescripcion(rs.getString("descripcion"));
+            grupo.setGenero(rs.getString("genero"));
+            grupo.setCiudad(rs.getString("ciudad"));
+            grupo.setPais(rs.getString("pais"));
+            grupo.setImagen(rs.getString("imagen"));
+            grupo.setPerfilSpotify(rs.getString("perfil_spotify"));
+            grupos.add(grupo);
+            }
+            return grupos;
+        }catch (SQLException e) {
+            System.out.println("Error al ejecutar la consulta: " + e.getMessage());
+        }
+        return null;
     }
 
     public static Grupo obtenerGrupoPorId(int id){
