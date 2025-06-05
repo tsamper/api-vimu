@@ -7,6 +7,8 @@ import com.tsamper.apivimu.modelo.bbdd.ConexionBBDD;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecintoDao {
     public static void introducirRecinto(Recinto recinto){
@@ -31,6 +33,29 @@ public class RecintoDao {
         }catch (SQLException e) {
             System.out.println("Error al ejecutar la consulta: " + e.getMessage());
         }
+    }
+    
+    public static List<Recinto> obtenerRecintos(){
+        String querySelect = "SELECT * FROM recintos";
+        try (PreparedStatement statement = ConexionBBDD.getConnection().prepareStatement(querySelect)){
+        	List<Recinto> recintos = new ArrayList();
+        	ResultSet rs = statement.executeQuery();
+        	while (rs.next()){
+                Recinto recinto = new Recinto();
+                recinto.setId(rs.getInt("id"));
+                recinto.setNombre(rs.getString("nombre"));
+                recinto.setDireccion(rs.getString("direccion"));
+                recinto.setCiudad(rs.getString("ciudad"));
+                recinto.setTelefono(rs.getString("telefono"));
+                recinto.setEmail(rs.getString("correo"));
+                recinto.setEnlaceMaps(rs.getString("enlace_maps"));
+                recintos.add(recinto);
+            }
+        	return recintos;
+        }catch (SQLException e) {
+            System.out.println("Error al ejecutar la consulta: " + e.getMessage());
+        }
+        return null;
     }
 
     public static Recinto obtenerRecintoPorId(int id){

@@ -330,13 +330,20 @@ public class VimuController {
         ConciertoDao.introducirConcierto(concierto, usuario);
     }
     
+    @GetMapping("/recintos")
+    public List<Recinto> obtenerRecintos(){
+        List<Recinto> recintos = RecintoDao.obtenerRecintos();
+        return recintos;
+    }
+
+    
     @GetMapping("/recintos/{id}")
     public Recinto obtenerRecintoPorId(@PathVariable int id){
         Recinto recinto = RecintoDao.obtenerRecintoPorId(id);
         return recinto;
     }
     
-    @GetMapping("/recintos/{nombre}")
+    @GetMapping("/recintos/nombre/{nombre}")
     public Recinto obtenerRecintoPorNombre(@PathVariable String nombre){
         Recinto recinto = RecintoDao.obtenerRecintoPorNombre(nombre);
         return recinto;
@@ -363,6 +370,13 @@ public class VimuController {
         Grupo grupo = GrupoDao.obtenerGrupoPorId(id);
         return grupo;
     }
+    
+    @GetMapping("/grupos/nombre/{nombre}")
+    public Grupo obtenerGrupoPorNombre(@PathVariable String nombre){
+        Grupo grupo = GrupoDao.obtenerGrupoPorNombre(nombre);
+        return grupo;
+    }
+    
     
     @GetMapping("/grupos")
     public List<Grupo> obtenerGrupos(){
